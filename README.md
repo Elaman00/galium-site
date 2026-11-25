@@ -56,7 +56,20 @@ galium-site/
 3. Впишите `telegramBotToken` и `telegramChatId` в `CONFIG`.
 ⚠️ Токен будет виден в коде сайта. Заведите отдельного бота только для заявок.
 
-## 6. Как выложить в интернет
+## 6. Сайт уже опубликован
+**Адрес:** https://elaman00.github.io/galium-site/ (GitHub Pages, репозиторий https://github.com/Elaman00/galium-site).
+
+Как выложить изменения после правок: в папке `galium-site` выполните по очереди
+```powershell
+git add -A
+git commit -m "Обновил цены"
+git push
+```
+Через 1–2 минуты изменения появятся на сайте.
+
+**Свой домен galium.kz**: в репозитории откройте Settings → Pages → Custom domain, впишите `galium.kz`. У регистратора домена добавьте DNS-записи, которые покажет GitHub (A-записи на 185.199.108–111.153 или CNAME на elaman00.github.io). Затем замените в `<head>` файла `index.html` адрес `https://elaman00.github.io/galium-site/` на `https://galium.kz/`.
+
+## 7. Другие варианты хостинга
 **Netlify (быстрее всего):** откройте https://app.netlify.com/drop и перетащите папку `galium-site`. Домен galium.kz подключается в Site settings → Domain management.
 
 **Vercel:** https://vercel.com → Add New → Project → загрузите папку или подключите GitHub-репозиторий. Framework: «Other».
